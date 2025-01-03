@@ -6,7 +6,7 @@
 </section>
 <section>
 <h2>Live Site</h2>
-<p>Check out my live portfolio website: <a href="https://itsharshportfolio/netlify.app/">Portfolio</a></p>
+<p>Check out my live portfolio website: <link src="https://itsharshportfolio.netlify.app/">Portfolio</link></p>
 </section>
 <section>
 <h2>Deployment Status</h2>
