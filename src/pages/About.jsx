@@ -7,7 +7,7 @@ const About = () => {
       {/* Image Section */}
       <div className="w-full md:w-1/2 flex justify-center">
         <img
-          src="./src/assets/Profile.jpg"
+          src="./Profile.jpg"
           alt="Harsh Gupta"
           className="rounded-2xl w-72 h-72 object-cover shadow-lg border border-white/20 backdrop-blur-md"
         />

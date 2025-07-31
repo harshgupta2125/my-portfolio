@@ -28,7 +28,7 @@ const Home = () => {
               Explore Projects
             </a>
             <a
-              href="./src/assets/Resume.pdf"
+              href="./Resume.pdf"
               download
               className="border border-teal-400 px-5 py-2 rounded-full text-teal-300 hover:bg-teal-600/20 transition"
             >
