@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4ade80; /* Tailwind teal-400 */
+  border-radius: 9999px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  

@@ -1,25 +1,12 @@
-<h1>Portfolio - Harsh Gupta</h1>
-<p>Welcome to my portfolio website! This site showcases my web development skills and provides a glimpse into my projects and achievements.</p>
-<section>
-<h2>About Me</h2>
-<p>I'm Harsh Gupta, a Computer Application student at Galgotias University. My passion lies in web development, data science, and AI, and I am continuously working to enhance my skills in these areas. You can explore my portfolio to see some of my work and learn more about my journey.</p>
-</section>
-<section>
-<h2>Live Site</h2>
-<p>Check out my live portfolio website: <link src="https://itsharshportfolio.netlify.app/">Portfolio</link></p>
-</section>
-<section>
-<h2>Deployment Status</h2>
-<p><a href="Netlify Status">Netlify Status</a></p>
-</section>
-<section>
-<h2>Contact</h2>
-<p>If you have any questions or would like to connect, please reach out to me via:</p>
-<ul>
-<li><a href="https://www.linkedin.com/in/guptaharsh000/">LinkedIn</a></li>
-<li><a href="mailto:harsh2125gupta@gmail.com">harsh2125gupta@gmail.com</a></li>
-</ul>
-</section>
-<footer>
-<p>Thank you for visiting my portfolio!</p>
-</footer>
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
