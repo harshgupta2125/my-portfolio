@@ -1,16 +1,65 @@
+import { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
-    return (
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[90%] md:w-[80%] bg-white/10 backdrop-blur-md border border-white/10 shadow-lg rounded-full px-6 py-3 flex justify-between items-center text-white">
-        <h1 className="text-lg font-bold tracking-wide text-teal-400">Harsh.dev</h1>
-        <ul className="hidden md:flex space-x-6 text-sm font-medium">
-          <li><a href="#about" className="hover:text-purple-400 transition">About</a></li>
-          <li><a href="#projects" className="hover:text-purple-400 transition">Projects</a></li>
-          <li><a href="#skills" className="hover:text-purple-400 transition">Skills</a></li>
-          <li><a href="#contact" className="hover:text-purple-400 transition">Contact</a></li>
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", to: "home" },
+    { name: "About", to: "about" },
+    { name: "Projects", to: "projects" },
+    { name: "Skills", to: "skills" },
+    { name: "Contact", to: "contact" },
+  ];
+
+  return (
+    <nav className="fixed w-full z-50 bg-gray-900 text-white shadow">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 className="text-xl font-bold text-teal-400">Harsh</h1>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
+                className="cursor-pointer hover:text-teal-300 transition"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-      </nav>
-    );
-  };
-  
-  export default Navbar;
-  
+
+        {/* Mobile Toggle */}
+        <div className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <ul className="md:hidden bg-gray-800 px-6 pt-4 pb-6 space-y-4 text-lg">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
+                onClick={() => setMenuOpen(false)}
+                className="block w-full hover:text-teal-300"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
