@@ -10,10 +10,22 @@ html {
   width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #4ade80; /* Tailwind teal-400 */
+  background: #00468C; /* Tailwind navy */
   border-radius: 9999px;
 }
 body {
-    font-family: 'Poppins', sans-serif;
+  @apply bg-background dark:bg-background-dark text-text-main dark:text-text-main-dark font-sans;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    @apply font-serif text-text-main dark:text-text-main-dark;
   }
+  p, li {
+    @apply font-sans text-text-main dark:text-text-main-dark;
+  }
+  ::selection {
+    background: #00468C20; /* subtle navy selection */
+  }
+}
   

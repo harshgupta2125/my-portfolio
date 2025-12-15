@@ -2,35 +2,30 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-night"
+      className="relative min-h-[80vh] w-full flex items-center justify-center overflow-hidden"
     >
-      {/* Blurred glowing blobs */}
-      <div className="absolute w-[300px] h-[300px] bg-purple-600 opacity-30 rounded-full top-10 left-[-80px] blur-3xl animate-pulse" />
-      <div className="absolute w-[400px] h-[400px] bg-teal-500 opacity-30 rounded-full bottom-10 right-[-100px] blur-3xl animate-ping" />
-
-      {/* Content */}
       <div
         className="relative z-10 text-center px-4"
         data-aos="zoom-in"
       >
-        <div className="p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-lg max-w-xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-wide">
-            Hey, I'm <span className="text-teal-400">Harsh Gupta</span>
+        <div className="p-6 md:p-8 bg-surface dark:bg-surface-dark border border-text-main/10 dark:border-text-main-dark/10 rounded-2xl shadow-sm max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-serif text-text-main dark:text-text-main-dark mb-4">
+            Hey, I'm <span className="text-primary dark:text-primary-dark">Harsh Gupta</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mb-6">
-            Web Developer | AI Enthusiast | Tech Explorer
+          <p className="text-lg md:text-xl text-text-main/80 dark:text-text-main-dark/80 mb-6">
+            Full-Stack Developer | Python & AI Enthusiast
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex justify-center gap-3">
             <a
               href="#projects"
-              className="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition"
+              className="px-5 py-2 rounded-md bg-primary text-white hover:opacity-90"
             >
               Explore Projects
             </a>
             <a
-              href="./Resume.pdf"
+              href="/Harsh-Gupta.pdf"
               download
-              className="border border-teal-400 px-5 py-2 rounded-full text-teal-300 hover:bg-teal-600/20 transition"
+              className="px-5 py-2 rounded-md border border-primary text-primary hover:bg-primary hover:text-white"
             >
               Download Resume
             </a>

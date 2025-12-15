@@ -6,6 +6,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
+    { name: "Portfolio", to: "portfolio" },
     { name: "About", to: "about" },
     { name: "Projects", to: "projects" },
     { name: "Skills", to: "skills" },
@@ -13,10 +14,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-white/5 backdrop-blur-md text-white rounded-full px-6 py-3 shadow-md border border-white/10">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-surface/80 dark:bg-surface-dark/80 backdrop-blur-md text-text-main dark:text-text-main-dark rounded-full px-6 py-3 shadow-md border border-text-main/10 dark:border-text-main-dark/10">
       <div className="flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-lg font-semibold text-teal-400">Harsh.dev</h1>
+        <h1 className="text-lg font-serif font-semibold text-primary dark:text-primary-dark">Harsh.dev</h1>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-8">
@@ -25,8 +26,11 @@ const Navbar = () => {
               <Link
                 to={item.to}
                 smooth={true}
+                spy={true}
+                offset={-96}
                 duration={500}
-                className="cursor-pointer hover:text-teal-300 transition"
+                activeClass="text-primary dark:text-primary-dark font-semibold"
+                className="cursor-pointer hover:text-primary dark:hover:text-primary-dark transition"
               >
                 {item.name}
               </Link>
@@ -35,22 +39,25 @@ const Navbar = () => {
         </ul>
 
         {/* Hamburger Icon */}
-        <div className="md:hidden text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+        <div className="md:hidden text-2xl cursor-pointer text-text-main dark:text-text-main-dark" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </div>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="mt-4 md:hidden bg-white/10 rounded-xl py-4 px-6 space-y-4 shadow-lg backdrop-blur-sm">
+        <div className="mt-4 md:hidden bg-surface/90 dark:bg-surface-dark/90 rounded-xl py-4 px-6 space-y-4 shadow-lg backdrop-blur-sm border border-text-main/10 dark:border-text-main-dark/10">
           {navItems.map((item, index) => (
             <Link
               key={index}
               to={item.to}
               smooth={true}
+              spy={true}
+              offset={-96}
               duration={500}
               onClick={() => setMenuOpen(false)}
-              className="block text-center text-white hover:text-teal-300 transition"
+              activeClass="text-primary dark:text-primary-dark font-semibold"
+              className="block text-center text-text-main dark:text-text-main-dark hover:text-primary dark:hover:text-primary-dark transition"
             >
               {item.name}
             </Link>

@@ -8,14 +8,14 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white scroll-smooth">
+    <div className="scroll-smooth min-h-screen bg-[radial-gradient(ellipse_at_top_left,rgba(0,70,140,0.05),transparent_60%)]">
       <Navbar />
-      <main>
-        <section id="home"><Home /></section>
-        <section id="about"><About /></section>
-        <section id="projects"><Projects /></section>
-        <section id="skills"><Skills /></section>
-        <section id="contact"><Contact /></section>
+      <main className="max-w-6xl mx-auto px-4 md:px-6 space-y-24 md:space-y-32" role="main">
+        <section id="home" className="scroll-mt-24 md:scroll-mt-28"><Home /></section>
+        <section id="about" className="scroll-mt-24 md:scroll-mt-28"><About /></section>
+        <section id="projects" className="scroll-mt-24 md:scroll-mt-28"><Projects /></section>
+        <section id="skills" className="scroll-mt-24 md:scroll-mt-28"><Skills /></section>
+        <section id="contact" className="scroll-mt-24 md:scroll-mt-28"><Contact /></section>
       </main>
       <Footer />
     </div>
