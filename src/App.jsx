@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import Achievements from "./pages/Achievements";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 
@@ -15,6 +16,7 @@ function App() {
         <section id="about" className="scroll-mt-24 md:scroll-mt-28"><About /></section>
         <section id="projects" className="scroll-mt-24 md:scroll-mt-28"><Projects /></section>
         <section id="skills" className="scroll-mt-24 md:scroll-mt-28"><Skills /></section>
+        <section id="achievements" className="scroll-mt-24 md:scroll-mt-28"><Achievements /></section>
         <section id="contact" className="scroll-mt-24 md:scroll-mt-28"><Contact /></section>
       </main>
       <Footer />
