@@ -130,7 +130,7 @@ const Home = () => {
                 <span>→</span> Explore Projects
               </motion.a>
               <motion.a
-                href="/Harsh_Gupta.pdf"
+                href="/Harsh-Gupta.pdf"
                 download
                 whileHover={{ scale: 1.05, x: 4 }}
                 whileTap={{ scale: 0.95 }}
